@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+nav{
+	position:fixed;
+  background: #022f69;
+  height: 11%;
+  width: 100%;
+}
+label.logo{
+  color: #fff;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: Right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: -15px 10px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+a.active,a:hover{
+  background: #fff;
+  transition: .5s;
+  color: #022f69;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+
+}
+#check{
+  display: none;
+}
+@media (max-width: 968px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 875px){
+  .checkbtn{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #27282c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display:block;
+    margin: 50px 0;
+    line-height: 30px;
+
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+.side {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  left: 0;
+  background-color: #FEFBF6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px ;
+  margin-top: 80px;
+  border-radius:25px;
+}
+.side a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.side a:hover {
+  color: #f1f1f1;
+}
+
+.side .closebtn {
+  position: absolute;
+  right: 25px;
+  font-size: 25px;
+  margin-top: -5vh;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+* {
+  box-sizing: border-box;
+}
+
+form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 70%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 12%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+<!-- ======= Jobs  ======= -->
+
+body {
+  margin: 0 auto;
+  max-width: 50vw;
+  padding: 0 20px;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 0 0 5px 10px;
+  margin: 10px 0;
+
+  max-width: 26vw;
+  margin-left: 20vw;
+}
+
+.container1 {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding:0 0 5px 10px;
+  margin: 10px 0;
+margin-top: -70vh;
+  max-width: 26vw;
+  margin-left: 50vw;
+}
+
+.container2 {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 0 0 5px 10px;
+  margin: 10px 0;
+
+  max-width: 26vw;
+  margin-left: 50vw;
+}
+
+
+
+
+
+
+.darker {
+  border-color: #ccc;
+  background-color: #ddd;
+}
+
+.container::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.container img {
+  float: left;
+  max-width: 60px;
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 50%;
+}
+
+.container img.right {
+  float: right;
+  margin-left: 20px;
+  margin-right:0;
+}
+.container img.middle {
+  float: middle;
+  margin-left: 30vw;
+  margin-right:0;
+  margin-top:-13vh;
+}
+.time-right {
+  float: right;
+  color: #aaa;
+}
+
+.time-left {
+  float: left;
+  color: #999;
+}
+.soft{
+  margin-top: -1vh;
+}
+.qw{
+  margin-top:-10vh ;
+  margin-left: 11vw;
+}
+
+.button{
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 22px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.container {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px 0 5px 10px;
+  margin: 10px 0;
+
+  max-width: 26vw;
+  margin-left: 13vw;
+}
+.container1 {
+  border: 2px solid #dedede;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  padding: 10px 0 5px 10px;
+  margin: 10px 0;
+
+  max-width: 26vw;
+  margin-left: 13vw;
+}
+.graph{
+    margin-left: 18vw;
+}
+</style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['', 'Others', 'You'],
+          ['Job-1', 1000, 400],
+          ['Job-2', 1170, 460],
+          ['Job-3', 660, 1120],
+          ['Job-4', 1030, 540],
+		  ['Job-5',343,23]
+        ]);
+
+        var options = {
+          chart: {
+            title: '',
+            subtitle: '',
+          }
+        };
+
+        var chart = new google.charts.Bar(document.getElementById('columnchart_material'));
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+</head>
+<body>
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Glow Pure</label>
+    <ul>
+      <li><a >Jobs</a></li>
+      <li><a href="companies.html">Company</a></li>
+      <li><a href="resumemaker.html">Resume Maker</a></li>
+      <li><a href="carr.html">Carrer Guidance</a></li>
+	  <li><a href="registerform.html">Logout  <i class="fa-solid fa-right-from-bracket"></i></a></li>
+    </ul>
+  </nav>
+
+
+
+
+<div id="mySidenav" class="side">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10094;</a>
+  <a href="yashwanth.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-house" style="font-size:22px; padding-left:0.6vw;"></i><br>Home</p></a>
+
+  <a href="profile.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-user" style="font-size:22px; padding-left:0.6vw;"></i><br>Profile</p></a>
+
+  <a href="msg.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-message" style="font-size:22px; padding-left:0.6vw;"></i><br>Messege</p></a>
+
+  <a href="contactus.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-comment" style="font-size:22px; padding-left:0.6vw;"></i><br>Feedback</p></a>
+
+  <a href="#" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-magnifying-glass-chart" style="font-size:22px; padding-left:0.6vw;"></i><br>Analysis</p></a>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<span style="font-size:35px;cursor:pointer;position:fixed;margin-top:10vh;background-color:#3FA796;border-radius:0px 10px 10px 0px" onclick="openNav()">&#10095;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+
+<h1 align="center" style="">Analysis & Time Estimation</h1>
+<div id="columnchart_material" style="width: 600px; height: 350px;margin-left:30%; position: fixed;"></div>
+
+<div class="container" style="margin-left:35vh;margin-top:52vh;">
+	<h3 style="margin-top:1vh;">Software Engineer</h3>
+  <h5>Selected Skill:web development</h5>
+  <h5>Company:google</h5>
+  <h5>Description:You have less chances to get this job as compared to others</h5>
+</div>
+<div class="container1" style="margin-left:95vh;margin-top:-28vh;">
+	<h3 style="margin-top:1vh;">Android developer</h3>
+  <h5>Selected Skill:Hybrid applications</h5>
+  <h5>Company:amazon</h5>
+  <h5>Description:As compared to other profiles,you have very less chance</h5>
+</div>
+
+</body>
+</html>

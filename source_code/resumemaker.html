@@ -1,0 +1,909 @@
+<html>
+
+<head>
+	<title>Resume maker</title>
+	<!-- <link rel="stylesheet" type="text/css" href="css/scroll.css"> -->
+	<link href='https://fonts.googleapis.com/css?family=Roboto:300,400,500' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700' rel='stylesheet' type='text/css'>
+	<meta name="description" content="Online document editor like interface to create and save Resume">
+	<meta name="keywords" content="resume,cv,maker,creator,generator,iit,guwahati,iitg">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+	<script src="safety.js"></script>
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+	<style>
+	body {
+	background-color:#F3DED5;
+	line-height: 1.4em;
+	  font-family: Arial, Helvetica, sans-serif;
+	  margin:0;
+}
+
+#left {
+	background-color: #363636;
+	line-height: 1em;
+}
+#left * {
+	color: #eee;
+}
+#left h3 , #left h4 {
+	color: #fff;
+}
+#left .btn {
+	color: #fff;
+}
+#left .btn.btn-default {
+	color: #666;
+}
+
+
+#panel {
+	padding: 5%;
+	color: white;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+#titleBox * {
+	font-size: 2em;
+}
+#customTemplateOptions {
+	display: none;
+}
+
+
+
+
+#page {
+	/* width: 794px; */
+	/* height: 29.7cm; */
+	width: 35cm;
+	background-color: white;
+	margin: 1% auto 1% auto;
+	padding: 0.2cm 1.3cm 1cm 1.3cm;
+	box-shadow: 0px 0px 20px 0px #000;
+	line-height: 1.4em;
+	text-align: left;
+}
+
+
+#page h2 {
+	margin-bottom: 4px;
+}
+#page h5 {
+	margin-top: 2px; margin-bottom: 3px;
+}
+
+a {
+	color: #666;
+}
+a.blue {
+	color: blue;
+	text-decoration: none;
+	border-bottom: 1px dotted blue;
+}
+a.blue:hover {
+	color: blue;
+	text-decoration: none;
+	border-bottom: 1px solid blue;
+}
+
+ul {
+	margin-left: 20px;
+	padding-left: 20px;
+}
+li {
+	margin-top: 1%;
+}
+li li {
+	margin-top: 0.25%;
+}
+
+
+
+.star {
+	margin-top: 5px;
+}
+.light {
+	font-weight: 300;
+}
+.grey {
+	color: #666;
+}
+.borderless { margin-bottom: 0; }
+.half {
+	display: inline-block;
+	width: 49.5%;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
+.tab {
+	margin-left: 10px;
+}
+
+
+
+#image_box {
+	float: left;
+	margin-top: 25px;
+	margin-left: 5px;
+	margin-right: 15px;
+}
+#info {
+	margin-bottom: 0px;
+	margin-top: auto;
+}
+#contact {
+	position: absolute;
+	bottom: 0;
+	right: 20px;
+	text-align: right;
+}
+#contentMinor , #contentBranch , #contactLink2 {
+	display: none;
+}
+
+
+.table tbody tr td, .table tbody tr th, .table thead tr th {
+	border: none;
+	padding: 0;
+	font-size: 13.5px;
+}
+td {
+	color: #444;
+}
+td.header {
+	color: #333;
+}
+.table.customBordered , .table.customBordered * {
+	border: 0px;
+}
+.table.customBordered {
+	border-top: 1px solid #999;
+	border-left: 1px solid #999;
+}
+.table.customBordered tr {
+	border-bottom: 1px solid #999;
+}
+.table.customBordered tr td {
+	padding: 0px 5px 0px 5px;
+	border-right: 1px solid #999;
+}
+
+
+.section-title h4 {
+	margin-top: 15px;
+	margin-bottom: 0px;
+}
+.section-title.uppercase h4 {
+	text-transform: uppercase;
+}
+.section-title.shaded h4 {
+	padding: 3px;
+	padding-left: 10px;
+	font-size: 14px;
+	background-color: #ccc !important;
+}
+
+.section-title.ruled.rule-above hr.hr-above {
+	border: 1px solid hsl(0,0%,40%);
+	margin-top: 0px; margin-bottom: 0px;
+}
+.section-title.ruled.rule-above hr.hr-below {
+	border: none;
+	margin: 0px;
+}
+.section-title.ruled.rule-below hr.hr-above {
+	border: none;
+	margin: 0px;
+}
+.section-title.ruled.rule-below hr.hr-below {
+	border: 1px solid hsl(0,0%,40%);
+	margin-top: 2px; margin-bottom: 5px;
+}
+.section-title.shaded hr {
+	border: none;
+	margin: 0px;
+}
+
+
+.text {
+	color: #444;
+	font-size: 13.5px;
+}
+.time {
+	color: #333;
+	font-style: italic;
+	margin-right: 1px;
+}
+.mentor {
+	font-weight: 300;
+	font-style: italic;
+}
+.link {
+	color: #666;
+	margin-left: 30px;
+	font-weight: 300;
+	font-style: italic;
+	margin-right: 1px;
+}
+
+.no-link .link {
+	display: none;
+}
+
+#sectionProjects .mentor , #sectionProjects .link {
+	display: inline-block;
+}
+#sectionSkills li , #sectionCourses li {
+	margin-top: 0.5%;
+}
+#sectionExperience .title , #sectionExperience .time {
+	display: inline-block;
+}
+#sectionPublications .title , #sectionPublications .time {
+	display: inline-block;
+}
+#sectionProjects .title , #sectionProjects .time {
+	display: inline-block;
+}
+#sectionInterest {
+	display: none;
+}
+#sectionFooterMessage {
+	display: none;
+}
+
+
+
+#page.verdana-sans * {
+	font-family: "Verdana", sans-serif;
+}
+#page.verdana-serif * {
+	font-family: "Verdana", serif;
+}
+#page.roboto * {
+	font-family: 'Roboto', sans-serif;
+}
+#page.droid * {
+	font-family: 'Droid Serif', serif;
+}
+.droid strong , .verdana-sans strong , .verdana-serif strong {
+	font-weight: 700;
+}
+.roboto strong {
+	font-weight: 500;
+}
+.droid .title , .verdana-sans .title , .verdana-serif .title {
+	font-weight: 700;
+}
+.roboto .title {
+	font-weight: 500;
+}
+
+@media(min-width:768px)
+{
+	#left , #right {
+		position: absolute;
+		margin-top: 0px;
+		top: 0;
+		bottom: 0;
+	}
+}
+.corner {
+	border-radius: 0px;
+}
+nav{
+	position:fixed;
+  background: #022f69;
+  height: 11%;
+  width: 100%;
+}
+label.logo{
+  color:white;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+  text-decoration:none;
+}
+nav ul{
+  float: Right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: -15px 10px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+a.active,a:hover{
+  background: #fff;
+  transition: .5s;
+  color: #022f69;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+
+}
+#check{
+  display: none;
+}
+@media (max-width: 968px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 875px){
+  .checkbtn{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #27282c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display:block;
+    margin: 50px 0;
+    line-height: 30px;
+
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+.side {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  left: 0;
+  background-color: #FEFBF6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px ;
+  margin-top: 80px;
+  border-radius:25px;
+}
+.side a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.side a:hover {
+  color: #f1f1f1;
+}
+
+.side .closebtn {
+  position: absolute;
+  right: 25px;
+  font-size: 25px;
+  margin-top: -5vh;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+.box img {
+    width: 100%;
+    height: 30%;
+}
+#sav{
+margin-left:93vw;
+margin-top:-3vh;
+}
+
+
+.res{
+	padding-left: 8vw;
+}
+
+.add_circle{
+	padding-left: -5vw;
+}
+
+	</style>
+</head>
+
+<body>
+<nav>
+
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo" style="text-decoration:none; color:white;">Glow Pure</label>
+    <ul>
+      <li><a href="jobs.html" >Jobs</a></li>
+      <li><a href="companies.html">Company</a></li>
+      <li><a href="#" class="active">Resume Maker</a></li>
+      <li><a href="carr.html">Carrer Guidance</a></li>
+	  <li><a href="registerform.html">Register</a></li>
+	  <li><a href="loginpage.html">login</a></li>
+    </ul>
+  </nav><br>
+  <br><br>
+<h1 style="padding-top:4vh; margin-left:6vw;">Resume maker</h1>
+<p align="left">
+<button class="btn btn-block btn-success " id="sav" onclick="window.print()">SAVE</button>
+</p>
+<hr class="hr-below">
+<div id="mySidenav" class="side">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10094;</a>
+  <a href="Home.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-house" style="font-size:22px; padding-left:0.6vw;"></i><br>Home</p></a>
+
+  <a href="profile.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-user" style="font-size:22px; padding-left:0.6vw;"></i><br>Profile</p></a>
+
+  <a href="msg.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-message" style="font-size:22px; padding-left:0.6vw;"></i><br>Messege</p></a>
+
+  <a href="contactus.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-comment" style="font-size:22px; padding-left:0.6vw;"></i><br>Feedback</p></a>
+
+  <a href="analysis.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-magnifying-glass-chart" style="font-size:22px; padding-left:0.6vw;"></i><br>Analysis</p></a>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<span style="font-size:35px;cursor:pointer;position:fixed;margin-top:10vh;background-color:#3FA796;border-radius:0px 10px 10px 0px" onclick="openNav()">&#10095;</span>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+<!-- 
+<div>
+	<i class="fa-solid fa-circle-plus" style="font-size:60px;" id="res1"></i>
+</div>
+-->
+
+		<div class="col-sm-9 text-center" id="center">
+
+			<div id="page" class="droid">
+
+				<div class="row" style="margin-bottom:10px;">
+				<div class="col-sm-12">
+					<div style="display:inline-block;" id="image_box">
+					</div>
+					<p><input type="file"  accept="image/*" name="image" id="file"  onchange="loadFile(event)" style="display: none;"></p>
+<p><img id="output" width="130"  style="padding-left: -6vh;padding-top: 0vh;" /></p>
+ <button><label for="file" style="cursor: pointer;"><span style="font-size:40px;" class="add_circle">&#10133;</span></label></button>
+
+<script>
+var loadFile = function(event) {
+	var image = document.getElementById('output');
+	image.src = URL.createObjectURL(event.target.files[0]);
+};
+</script>
+					<div id="info" style="display:inline-block;" class="res">
+						
+						<h2 id="contentName">Student Name</h2>
+						<h5 id="contentRoll">Roll Number : 14010XXXX</h5>
+						<h5 id="contentCourse">B.Tech - XXX Engineering</h5>
+						<h5 id="contentBranch">XXX Engineering</h5>
+						<h5 id="contentMinor">Minor in XXX</h5>
+						<h5 id="contentCollege">Indian Institute of Technology Guwahati</h5>
+					</div>
+				</div>
+				</div>
+
+
+
+			<div class="section" id="sectionEducation">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Education</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul class="nobullet">
+					<li>
+						<table class="table customBordered" id="educationTable">
+							<tr>
+								<td class="header"><strong>Year</strong></td>
+								<td class="header"><strong>Degree / Certificate</strong></td>
+								<td class="header"><strong>Institute / Board</strong></td>
+								<td class="header"><strong>CGPA/Percentage</strong></td>
+							</tr>
+							<tr>
+								<td>2014 - Present</td>
+								<td>B.Tech</td>
+								<td>Indian Institute of Technology, Guwahati</td>
+								<td>9.00 (Current)</td>
+							</tr>
+							<tr>
+								<td>2014</td>
+								<td>Senior secondary</td>
+								<td>CBSE board</td>
+								<td>97.0%</td>
+							</tr>
+							<tr>
+								<td>2012</td>
+								<td>Secondary</td>
+								<td>CBSE board</td>
+								<td>10.0</td>
+							</tr>
+						</table>
+					</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionExperience">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Experience</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<div>
+						<div class="title">XYZ Engineer at 'ABC'</div>
+						<div class="time right">May 2016 - July 2016</div>
+						</div>
+						<div>
+						<div class="link right">www.abc.in</div>
+						<div class="text">Analysed app usage statistics to recommend items based on user's preference.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">XYZ Engineer at 'ABC'</div>
+						<div class="time right">Dec 2015</div>
+						</div>
+						<div>
+						<div class="link right">www.abc.in</div>
+						<div class="text">Designed methods to improve the existing unit test mechanism.</div>
+						</div>
+					</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionPublications">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Publications</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<div>
+						<div class="title">Advanced analysis of damping motion</div>
+						<div class="time right">PCES 2010</div>
+						</div>
+						<div>
+						<div class="mentor">Mentors</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Efficient ranking of search results</div>
+						<div class="time right">LOCS 2010</div>
+						</div>
+						<div>
+						<div class="mentor">Mentors</div>
+						</div>
+					</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionProjects">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Projects</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Ongoing</div>
+						</div>
+						<div>
+						<div class="mentor tab">Project Mentor</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Apr 2016</div>
+						</div>
+						<div>
+						<div class="mentor tab">Dr. XYZ, Associate Professor, Dept. of XXX, IIT Guwahati</div>
+						<div class="link right">goo.gl/link</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Jan 2016 - Mar 2016</div>
+						</div>
+						<div>
+						<div class="mentor tab">Mentor name</div>
+						<div class="link right">www.xyz.in</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Feb 2016</div>
+						</div>
+						<div>
+						<div class="link right">goo.gl/link</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Nov 2015</div>
+						</div>
+						<div>
+						<div class="mentor tab">Mentor name</div>
+						<div class="link right">github.com/link</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					<li>
+						<div>
+						<div class="title">Project title</div>
+						<div class="time right">Aug 2015 - Sep 2015</div>
+						</div>
+						<div>
+						<div class="text">Graphical interface to share files over institute's network.</div>
+						</div>
+					</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionSkills">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Technical skills</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<strong><span class="skillCategory">Programming languages</span> :</strong>
+						C++, Python, Java *
+					</li>
+					<li>
+						<strong><span class="skillCategory">Web technologies</span> :</strong>
+						HTML, CSS, Javascript
+					</li>
+					<li>
+						<strong><span class="skillCategory">Database management</span> :</strong>
+						mySQL
+					</li>
+					<li>
+						<strong><span class="skillCategory">Miscellaneous</span> :</strong>
+						Android programming *
+					</li>
+					<li>
+						<strong><span class="skillCategory">Operating system</span> :</strong>
+						Windows, Linux
+					</li>
+					<div class="star"><i>*<span class="light"> Elementary proficiency</span></i></div>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionResponsibility">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Positions of Responsibility</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+						<li>XYZ Head, ABC 2016 (the annual XYZ of IIT Guwahati)</li>
+						<li>City representative, New Delhi, ABC 2015</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionAchievements">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Achievements</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<span class="title">ABC contest 2016 : </span>
+						<span class="text">Secured 1st position in the National level contest.</span>
+					</li>
+					<li>
+						<span class="title">Joint Entrance Examination 2014 : </span>
+						<span class="text">Secured All India Rank 1 among 0.15 million candidates appearing for the test.</span>
+					</li>
+					<li>
+						<span class="title">KVPY 2013-14 : </span>
+						<span class="text">Obtained the National research fellowship scholarship by securing a position in top 1%.</span>
+					</li>
+					<li>
+						<span class="title">ABC Olympiad 2014 : </span>
+						<span class="text">Qualified for the international stage by securing top position in following stages :</span>
+						<ul class="decimal">
+							<li>Qualifiers stage : Bagged 20th position among 5000 candidates.</li>
+							<li>National level : Bagged 7th position among 250 candidates.</li>
+						</ul>
+					</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionCourses">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Key courses taken</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<div class="row">
+						<div class="col-sm-6">
+							<li>Computer lab</li>
+							<li>Process design</li>
+							<li>Statistics *</li>
+						</div>
+						<div class="col-sm-6">
+							<li>Advanced calculus</li>
+							<li>XYZ architecture *</li>
+							<li>ABC lab *</li>
+						</div>
+					</div>
+					<div class="star"><i>*<span class="light"> To be completed in Nov 2016</span></i></div>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionCurricular">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Extracurriculars</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<li>
+						<span class="title">ABC workshop : </span>
+						<span class="text">Attended a 3-day workshop on Image sensing satellute development.</span>
+					</li>
+					<li>
+						<span class="title">ABC contest 2016 : </span>
+						<span class="text">Secured 1st position in the National level contest.</span>
+					</li>
+					</ul>
+				</div>
+
+
+				<div class="section" id="sectionInterest">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h4><strong>Fields of interest (OR Research interests)</strong></h4>
+						<hr class="hr-below">
+					</div>
+					<ul>
+					<div class="row">
+						<div class="col-sm-6">
+							<li>Advanced XYZ</li>
+							<li>ABC design</li>
+						</div>
+						<div class="col-sm-6">
+							<li>XYZ processing</li>
+							<li>Robotics</li>
+						</div>
+					</div>
+					</ul>
+				</div>
+
+				<div class="section" id="sectionFooterMessage">
+					<div class="section-title ruled rule-above">
+						<hr class="hr-above">
+						<h6><strong>(References available on request)</strong></h6>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+
+	</div>
+
+</div>
+<script>
+document.querySelector('#page').contentEditable = true;
+
+defaultTemplateVars = [ "fontDroid" , "caseNormal" , "titleRuled" , "ruleAbove" , "imageShow" , "rollShow" , "course1" , "tableShow" , "edyearFirst" , "experience1" , "projects1" ]
+
+$('.toggle-option').click(function(){
+	toggleType = $(this).attr('data-toggle');
+	toggleValue = $(this).attr('id');
+	if(!$(this).hasClass('multi-select'))
+	{
+		if(!$(this).hasClass('selected'))
+		{
+			$('.toggle-option',$(this).parent()).removeClass('selected');
+			$(this).addClass('selected');
+			changeTemplate(toggleType,toggleValue);
+		}
+	}
+	else
+	{
+		if($(this).hasClass('selected'))
+			$(this).removeClass('selected');
+		else
+			$(this).addClass('selected');
+		changeTemplate(toggleType,toggleValue);
+	}
+});
+
+
+
+</script>
+
+</body>
+
+</html>

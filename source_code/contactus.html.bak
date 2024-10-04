@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>contactus | Glowpure</title>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Roboto:300,300i,400,400i,500,500i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+ <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+<style>
+body {
+  margin: 0;
+ font-family: Arial, Helvetica, sans-serif;
+  background-color:#F3DED5;
+  letter-spacing:1.4px;
+}
+
+nav{
+	position:fixed;
+  background: #022f69;
+  height: 11%;
+  width: 100%;
+}
+label.logo{
+  color: #fff;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: Right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 110px;
+  margin: -15px 10px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+a.active,a:hover{
+  background: #fff;
+  transition: .5s;
+  color: #022f69;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+
+}
+#check{
+  display: none;
+}
+@media (max-width: 968px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 875px){
+  .checkbtn{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #27282c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display:block;
+    margin: 50px 0;
+    line-height: 30px;
+
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+.side {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  left: 0;
+  background-color: #FEFBF6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px ;
+  margin-top: 80px;
+  border-radius:25px;
+}
+.side a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.side a:hover {
+  color: #f1f1f1;
+}
+
+.side .closebtn {
+  position: absolute;
+  right: 25px;
+  font-size: 25px;
+  margin-top: -5vh;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+
+</style>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.5;
+}
+.contact-bg{
+    height: 40vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8)), url(image/contact-bg.jpg);
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    text-align: center;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.contact-bg h3{
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+.contact-bg h2{
+    font-size: 3rem;
+    text-transform: uppercase;
+    padding: 0.4rem 0;
+    letter-spacing: 4px;
+}
+.line div{
+    margin: 0 0.2rem;
+}
+.line div:nth-child(1),
+.line div:nth-child(3){
+    height: 3px;
+    width: 70px;
+    background: #f7327a;
+    border-radius: 5px;
+}
+.line{
+    display: flex;
+    align-items: center;
+}
+.line div:nth-child(2){
+    width: 10px;
+    height: 10px;
+    background: #f7327a;
+    border-radius: 50%;
+}
+.text{
+    font-weight: 300;
+    opacity: 0.9;
+}
+.contact-bg .text{
+    margin: 1.6rem 0;
+}
+.contact-body{
+    max-width: 1320px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+.contact-info{
+    margin: 2rem 0;
+    text-align: center;
+    padding: 2rem 0;
+}
+.contact-info span{
+    display: block;
+}
+.contact-info div{
+    margin: 0.8rem 0;
+    padding: 1rem;
+}
+.contact-info span .fas{
+    font-size: 2rem;
+    padding-bottom: 0.9rem;
+    color: #f7327a;
+}
+.contact-info div span:nth-child(2){
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+.contact-info .text{
+    padding-top: 0.4rem;
+}
+.contact-form{
+    padding: 2rem 0;
+    border-top: 1px solid #c7c7c7;
+}
+.contact-form form{
+    padding-bottom: 1rem;
+}
+.form-control{
+    width: 100%;
+    border: 1.5px solid #c7c7c7;
+    border-radius: 5px;
+    padding: 0.7rem;
+    margin: 0.6rem 0;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    outline: 0;
+}
+.form-control:focus{
+    box-shadow: 0 0 6px -3px rgba(48, 48, 48, 1);
+}
+.contact-form form div{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 0.6rem;
+}
+.send-btn{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #fff;
+    background: #f7327a;
+    border: none;
+    border-radius: 5px;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+.send-btn:hover{
+    opacity: 0.8;
+}
+.contact-form > div img{
+    width: 85%;
+}
+.contact-form > div{
+    margin: 0 auto;
+    text-align: center;
+}
+.contact-footer{
+    padding: 2rem 0;
+    background: #000;
+}
+.contact-footer h3{
+    font-size: 1.3rem;
+    color: #fff;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.social-links{
+    display: flex;
+    justify-content: center;
+}
+.social-links a{
+    text-decoration: none;
+    width: 40px;
+    height: 40px;
+    color: #fff;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0.4rem;
+    transition: all 0.4s ease;
+}
+.social-links a:hover{
+    color: #f7327a;
+    border-color: #f7327a;
+}
+
+@media screen and (min-width: 768px){
+    .contact-bg .text{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .contact-info{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 992px){
+    .contact-bg .text{
+        width: 50%;
+    }
+    .contact-form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+    }
+}
+
+@media screen and (min-width: 1200px){
+    .contact-info{
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Glow Pure</label>
+    <ul>
+      <li><a href="jobs.html" >Jobs</a></li>
+      <li><a href="companies.html">Company</a></li>
+      <li><a href="resumemaker.html">Resume Maker</a></li>
+      <li><a href="carr.html">Carrer Guidance</a></li>
+	  <li><a href="loginpage.html">login&ensp;&ensp;|</a></li>
+	  <li><a href="registerform.html">register</a></li>
+    </ul>
+  </nav>
+
+
+
+
+<div id="mySidenav" class="side">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10094;</a>
+  <a href="yashwanth.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-house" style="font-size:22px; padding-left:0.6vw;"></i><br>Home</p></a>
+
+  <a href="profile.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-user" style="font-size:22px; padding-left:0.6vw;"></i><br>Profile</p></a>
+
+  <a href="msg.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-message" style="font-size:22px; padding-left:0.6vw;"></i><br>Messege</p></a>
+
+  <a href="#" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-comment" style="font-size:22px; padding-left:0.6vw;"></i><br>Feedback</p></a>
+
+  <a href="analysis.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-magnifying-glass-chart" style="font-size:22px; padding-left:0.6vw;"></i><br>Analysis</p></a>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<span style="font-size:35px;cursor:pointer;position:fixed;margin-top:10vh;background-color:#3FA796;border-radius:0px 10px 10px 0px" onclick="openNav()">&#10095;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+ <section class = "contact-section">
+      <div class = "contact-bg">
+        <h3>Get in Touch with Us</h3>
+        <h2>contact us</h2>
+        <div class = "line">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+      </div>
+
+
+      <div class = "contact-body">
+        <div class = "contact-info">
+          <div>
+            <span><i class = "fas fa-mobile-alt"></i></span>
+            <span>Phone No.</span>
+            <span class = "text">+91 92239 28245</span>
+          </div>
+          <div>
+            <span><i class = "fas fa-envelope-open"></i></span>
+            <span>E-mail</span>
+            <span class = "text">mail@glowpure.com</span>
+          </div>
+          <div>
+            <span><i class = "fas fa-map-marker-alt"></i></span>
+            <span>Address</span>
+            <span class = "text">Sr university,warangal,telangana,India</span>
+          </div>
+          <div>
+            <span><i class = "fas fa-clock"></i></span>
+            <span>Opening Hours</span>
+            <span class = "text">Monday - Friday (9:00 AM to 5:00 PM)</span>
+          </div>
+        </div>
+		<div>
+		<p style="font-size:35px;"><b>Feedback</b></p>
+		</div>
+
+        <div class = "contact-form">
+          <form>
+            <div>
+              <input type = "text" class = "form-control" placeholder="First Name">
+              <input type = "text" class = "form-control" placeholder="Last Name">
+            </div>
+            <div>
+              <input type = "email" class = "form-control" placeholder="E-mail">
+              <input type = "text" class = "form-control" placeholder="Phone">
+            </div>
+            <textarea rows = "5" placeholder="Message" class = "form-control"></textarea>
+            <input type = "submit" class = "send-btn" value = "send message">
+          </form>
+
+          <div>
+            <img src = "image/contact-png.png" alt = "">
+          </div>
+        </div>
+      </div>
+
+     
+
+    </section>
+
+    
+
+
+
+</body>
+</html>

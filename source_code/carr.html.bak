@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>carrerguidance| Glowpure</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color:#fff0f3;
+}
+
+nav{
+	position:fixed;
+  background: #022f69;
+  height: 11%;
+  width: 100%;
+}
+label.logo{
+  color: #fff;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: Right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 80px;
+  margin: -15px 10px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+a.active,a:hover{
+  background: #fff;
+  transition: .5s;
+  color: #022f69;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+
+}
+#check{
+  display: none;
+}
+@media (max-width: 968px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 875px){
+  .checkbtn{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #27282c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display:block;
+    margin: 50px 0;
+    line-height: 30px;
+
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+.side {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  left: 0;
+  background-color: #FEFBF6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px ;
+  margin-top: 80px;
+  border-radius:25px;
+}
+.side a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.side a:hover {
+  color: #f1f1f1;
+}
+
+.side .closebtn {
+  position: absolute;
+  right: 25px;
+  font-size: 25px;
+  margin-top: -5vh;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Glow Pure</label>
+    <ul>
+      <li><a href="jobs.html ">Jobs</a></li>
+      <li><a href="companies.html">Company</a></li>
+      <li><a href="resumemaker.html">Resume Maker</a></li>
+      <li><a class="active">Carrer Guidance</a></li>
+	  <li><a href="registerform.html">Register</a></li>
+	   <li><a href="loginpage.html">login</a></li>
+    </ul>
+  </nav>
+
+
+
+<div id="mySidenav" class="side">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10094;</a>
+  <a href="yashwanth.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-house" style="font-size:22px; padding-left:0.6vw;"></i><br>Home</p></a>
+
+  <a href="profile.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-user" style="font-size:22px; padding-left:0.6vw;"></i><br>Profile</p></a>
+
+  <a href="msg.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-message" style="font-size:22px; padding-left:0.6vw;"></i><br>Messege</p></a>
+
+  <a href="contactus.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-comment" style="font-size:22px; padding-left:0.6vw;"></i><br>Feedback</p></a>
+
+  <a href="analysis.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-magnifying-glass-chart" style="font-size:22px; padding-left:0.6vw;"></i><br>Analysis</p></a>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<span style="font-size:35px;cursor:pointer;position:fixed;margin-top:10vh;background-color:#3FA796;border-radius:0px 10px 10px 0px" onclick="openNav()">&#10095;</span>
+<u><h2 style="padding-left:5vw;margin-top:4vh;">CARRER GUIDANCE</H2></u><hr>
+<br>
+<br>
+<br>
+<h3>&emsp;&emsp;&emsp;1.Online Presence:</h3>
+<p style="padding-left:10vw"><b>Description:&emsp;Build a solid platform,Always be optimizing and improving,Provide consistent, valuable content,Be social and engaging
+<br>Start building relationships,Connect with existing brands for guest posting and podcasting,Your online presence doesn’t
+<br>pring into life by magic. You must create, launch, and sustain it over time.If you don’t do this, the lack of a healthy online 
+<br>presence could deter your career success.The choice is yours. Other people can advise you, provide active help when
+<br>needed, and cheer you on. However, they can’t take over your responsibility.</b><br>
+<br>Suggested book:<br><img src="https://images-na.ssl-images-amazon.com/images/S/compressed.photo.goodreads.com/books/1386924534i/6932.jpg" style="padding-left:8vw;"></img></p>
+<br>
+<br>
+<br>
+<h3>&emsp;&emsp;&emsp;2.Professional Network:</h3>
+<p style="padding-left:10vw"><b>Description:&emsp;Helping find candidates for job positions,Learning about a job opening,Providing professional advice,Finding out about
+<br>potential clients,Focus on reaching out to the right professionals,Stay in touch and This Network is to connect with our community folks
+<br>who are in the same field and seek assistance with finding job opportunities or guidance with switching careers.It will be a network to 
+<br>talk to and get coached.It will also guide anyone who want to become entrepreneurs by connecting them with people who are entrepreneurs
+<br>or investors.</b><br>
+<br>Suggested book:<br><img src="https://m.media-amazon.com/images/I/41Yp-uli-ML._SX329_BO1,204,203,200_.jpg" style="padding-left:8vw; width:8vw;height:25vh;"></img></p>
+<br>
+<br>
+<br>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+</body>
+</html>

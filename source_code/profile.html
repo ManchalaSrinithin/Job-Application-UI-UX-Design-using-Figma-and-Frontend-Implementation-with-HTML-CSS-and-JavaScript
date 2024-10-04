@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>profile | Glowpure</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-alpha1/dist/js/bootstrap.bundle.min.js">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<script src="safety.js"></script>
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+ background-color:#F3DED5;
+}
+
+nav{
+	position:fixed;
+  background: #022f69;
+  height: 11%;
+  width: 100%;
+}
+label.logo{
+  color: #fff;
+  font-size: 35px;
+  line-height: 80px;
+  padding: 0 100px;
+  font-weight: bold;
+}
+nav ul{
+  float: Right;
+  margin-right: 20px;
+}
+nav ul li{
+  display: inline-block;
+  line-height: 110px;
+  margin: -15px 10px;
+}
+nav ul li a{
+  color: #fff;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+a.active,a:hover{
+  background: #fff;
+  transition: .5s;
+  color: #022f69;
+}
+.checkbtn{
+  font-size: 30px;
+  color: #fff;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+  text-decoration: none;
+
+}
+#check{
+  display: none;
+}
+@media (max-width: 968px){
+  label.logo{
+    font-size: 30px;
+    padding-left: 50px;
+  }
+  nav ul li a{
+    font-size: 16px;
+  }
+}
+@media (max-width: 875px){
+  .checkbtn{
+    display: block;
+  }
+  nav ul{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #27282c;
+    top: 80px;
+    left: -100%;
+    text-align: center;
+    transition: all .5s;
+  }
+  nav ul li{
+    display:block;
+    margin: 50px 0;
+    line-height: 30px;
+
+  }
+  nav ul li a{
+    font-size: 20px;
+  }
+  a:hover, a.active{
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul{
+    left: 0;
+  }
+}
+
+.side {
+  height: 100%;
+  width: 0px;
+  position: fixed;
+  z-index: 1;
+  top: 50;
+  left: 0;
+  background-color: #FEFBF6;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px ;
+  margin-top: 80px;
+  border-radius:25px;
+}
+.side a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.side a:hover {
+  color: #f1f1f1;
+}
+
+.side .closebtn {
+  position: absolute;
+  right: 25px;
+  font-size: 25px;
+  margin-top: -5vh;
+  margin-left: 50px;
+}
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+
+
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #BA68C8
+}
+
+.profile-button {
+    background: rgb(99, 39, 120);
+    box-shadow: none;
+    border: none
+}
+
+.profile-button:hover {
+    background: #682773
+}
+
+.profile-button:focus {
+    background: #682773;
+    box-shadow: none
+}
+
+.profile-button:active {
+    background: #682773;
+    box-shadow: none
+}
+
+.back:hover {
+    color: #682773;
+    cursor: pointer
+}
+
+.labels {
+    font-size: 11px
+}
+
+.add-experience:hover {
+    background: #BA68C8;
+    color: #fff;
+    cursor: pointer;
+    border: solid 1px #BA68C8
+}
+
+
+
+
+
+</style>
+</head>
+<body>
+
+<nav>
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+      <i class="fas fa-bars"></i>
+    </label>
+    <label class="logo">Glow Pure</label>
+    <ul>
+      <li><a href="jobs.html ">Jobs</a></li>
+      <li><a href="companies.html">Company</a></li>
+      <li><a href="resumemaker.html">Resume Maker</a></li>
+      <li><a href="carr.html">Carrer Guidance</a></li>
+	  <li><a href="registerform.html">Register</a></li>
+	   <li><a href="loginpage.html">login</a></li>
+    </ul>
+  </nav>
+
+
+
+<div id="mySidenav" class="side">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&#10094;</a>
+  <a href="Home.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-house" style="font-size:22px; padding-left:0.6vw;"></i><br>Home</p></a>
+
+  <a href="profile.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-user" style="font-size:22px; padding-left:0.6vw;"></i><br>Profile</p></a>
+
+  <a href="msg.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-message" style="font-size:22px; padding-left:0.6vw;"></i><br>Messege</p></a>
+
+  <a href="contactus.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-comment" style="font-size:22px; padding-left:0.6vw;"></i><br>Feedback</p></a>
+
+  <a href="analysis.html" ><p class="side1" style="font-size:17px; padding-left:-1vw;"><i class="fa-solid fa-magnifying-glass-chart" style="font-size:22px; padding-left:0.6vw;"></i><br>Analysis</p></a>
+
+</div>
+
+<br>
+<br>
+<br>
+<br>
+
+<span style="font-size:35px;cursor:pointer;position:fixed;margin-top:10vh;background-color:#3FA796;border-radius:0px 10px 10px 0px" onclick="openNav()">&#10095;</span>
+
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+}
+</script>
+
+
+
+<div class="container rounded bg-white mt-5 mb-5">
+  <div class="row">
+      <div class="col-md-3 border-right">
+          <div class="d-flex flex-column align-items-center text-center p-3 py-5"><img class="rounded-circle mt-5" width="150px" src="https://st3.depositphotos.com/15648834/17930/v/600/depositphotos_179308454-stock-illustration-unknown-person-silhouette-glasses-profile.jpg"><span class="font-weight-bold">Edogaru</span><span class="text-black-50">edogaru@mail.com.my</span><span> </span></div>
+      </div>
+      <div class="col-md-5 border-right">
+          <div class="p-3 py-5">
+              <div class="d-flex justify-content-between align-items-center mb-3">
+                  <h4 class="text-right">Profile Settings</h4>
+              </div>
+              <div class="row mt-2">
+                  <div class="col-md-6"><label class="labels">Name</label><input type="text" class="form-control" placeholder="first name" value=""></div>
+                  <div class="col-md-6"><label class="labels">Surname</label><input type="text" class="form-control" value="" placeholder="surname"></div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-12"><label class="labels">Mobile Number</label><input type="text" class="form-control" placeholder="enter phone number" value=""></div>
+                  <div class="col-md-12"><label class="labels">Address Line 1</label><input type="text" class="form-control" placeholder="enter address line 1" value=""></div>
+                  <div class="col-md-12"><label class="labels">Address Line 2</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                  <div class="col-md-12"><label class="labels">Postcode</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                  <div class="col-md-12"><label class="labels">State</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                  <div class="col-md-12"><label class="labels">Area</label><input type="text" class="form-control" placeholder="enter address line 2" value=""></div>
+                  <div class="col-md-12"><label class="labels">Email ID</label><input type="text" class="form-control" placeholder="enter email id" value=""></div>
+                  <div class="col-md-12"><label class="labels">Education</label><input type="text" class="form-control" placeholder="education" value=""></div>
+              </div>
+              <div class="row mt-3">
+                  <div class="col-md-6"><label class="labels">Country</label><input type="text" class="form-control" placeholder="country" value=""></div>
+                  <div class="col-md-6"><label class="labels">State/Region</label><input type="text" class="form-control" value="" placeholder="state"></div>
+              </div>
+              <div class="mt-5 text-center"><button class="btn btn-primary profile-button" type="button">Save Profile</button></div>
+          </div>
+      </div>
+      <div class="col-md-4">
+          <div class="p-3 py-5">
+              <div class="d-flex justify-content-between align-items-center experience"><span>Edit Experience</span><span class="border px-3 p-1 add-experience"><i class="fa fa-plus"></i>&nbsp;Experience</span></div><br>
+              <div class="col-md-12"><label class="labels">Experience in Designing</label><input type="text" class="form-control" placeholder="experience" value=""></div> <br>
+              <div class="col-md-12"><label class="labels">Additional Details</label><input type="text" class="form-control" placeholder="additional details" value=""></div>
+          </div>
+      </div>
+  </div>
+</div>
+</div>
+</div>
+
+</body>
+</html>
